@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+ <meta charset="UTF-8">
+<html>
+<head>
+    <title>📡 Generaci&oacute;n y Detecci&oacute;n</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel|Dancing Script|Josefin Sans|Petit Formal Script|Roboto|Numans|Trirong">
+    <style>
+        body {
+            font-family: "Trirong", serif;
+            background-color: #e6f7f5; /* Fondo general azul verdoso claro */
+            margin: 0;
+            padding: 0;
+            color: #333; 
+        }
+        
+        .contenedor-principal {
+            width: 90%;
+            max-width: 1190px;
+            margin: 20px auto;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .contenidopagina {
+            padding: 40px 60px;
+            text-align: left;
+            font-family: "Numans", sans-serif;
+            min-height: 400px;
+        }        
+        .contenidopagina h1 {
+            color: #319795; /* Teal oscuro */
+            font-family: "Numans", sans-serif;
+            text-align: center;
+            font-size: 37px;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        .contenidopagina h2 {
+            color: #319795;
+            padding-bottom: 10px;
+            font-family: "Dancing Script", cursive;
+            margin-top: 35px;
+            font-size: 35px;
+        }
+
+        .contenidopagina h3 {
+            color: #4fd1c5; /* Color de acento celeste */
+            font-family: "Josefin Sans", sans-serif;
+            margin-top: 25px;
+        }
+        
+        .contenidopagina p, .contenidopagina li {
+            line-height: 1.7;
+            text-align: justify;
+        }        
+        .contenidopagina table {
+            border-collapse: collapse;
+            margin: 30px auto;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            font-family: "Roboto", sans-serif;
+        }
+
+        .contenidopagina table tr:nth-child(even) {
+            background-color: #f7f7f7;
+        }
+        
+        .contenidopagina table tr:hover {
+            background-color: #e6f7f5;
+        }
+
+        /* Estilo para las celdas de datos estándar */
+        .contenidopagina table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        
+        /* Clase para cabecera de tabla 1 (Celeste claro) - Nombre corregido a español */
+        .cabeceraclara td { 
+            background-color: #b2f5ea; 
+            color: #333; 
+            font-weight: bold;
+        }
+
+        /* Clase para cabecera de tabla 2 (Celeste principal) - Nombre corregido a español */
+        .cabeceraprincipal td {
+            background-color: #4fd1c5; 
+            color: white;
+            font-weight: bold;
+        }
+
+        /* --- ESTILOS DEL MENÚ DESPLEGABLE --- */
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin-top: 20px;
+            width: 100%; 
+            text-align: center;
+            transition: padding-bottom 0.5s;
+            z-index: 10;
+        }
+        
+        .dropdown:hover {
+            padding-bottom: 250px; 
+        }
+
+        .droppp {
+            background-color: #4fd1c5;
+            color: white;
+            padding: 14px 24px;
+            font-size: 18px;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: transform 0.3s;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            font-family: "Roboto", sans-serif;
+        }
+        
+        .droppp:hover {
+            transform: scale(1.05);
+            background-color: #3aa89b;
+        }
+
+        .dropdownContent {
+            display: none;
+            position: absolute;
+            background-color: white;
+            width: 100%;
+            left: 0;
+            
+            top: 100%;
+            margin-top: 10px;
+            
+            border-radius: 4px;
+            padding: 12px;
+            text-align: center;
+            z-index: 9;
+        }
+        
+        .dropdown:hover .dropdownContent {
+            display: block;
+        }
+
+        .temaDropdown {
+            display: inline-block;
+            width: 180px;
+            height: 40px;
+            padding: 8px 14px;
+            vertical-align: top;
+            margin: 8px;
+            background-color: #4fd1c5;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            font-family: "Josefin Sans", sans-serif;
+            font-weight: bold;
+            font-size: 14px;
+            transition: transform 0.5s;
+        }
+        
+        .temaDropdown:hover {
+            background-color: #3aa89b;
+            transform: scale(1.1);
+            color: white;
+        }
+
+        /* --- ESTILO DE PIE DE PÁGINA --- */
+        .pieContenido {
+            background-color: #319795;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-family: "Roboto", sans-serif;
+        }
+
+        /* --- ESTILOS DE IMÁGENES --- */
+        img.gif1 {
+            width: 260px;
+            height: 256px;
+        }
+        img.gif2 {
+            width: 200px;
+            height: 156px;
+            border-radius: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor-principal">
+        <div class="dropdown">
+            <a href="#" class="droppp">Ver temas principales...</a>
+            
+            <div class="dropdownContent">
+                <a href="index.html" class="temaDropdown">🏠 Ir a página principal</a>
+                <a href="pag1.html" class="temaDropdown">🌊 &iquest;Qu&eacute; son las ondas electromagn&eacute;ticas?</a>
+                <a href="pag2.html" class="temaDropdown">🌈 El espectro electromagn&eacute;tico</a>
+                <a href="pag3.html" class="temaDropdown">⚙️ Propiedades fundamentales</a>
+                <a href="pag4.html" class="temaDropdown">📡 Generaci&oacute;n y detecci&oacute;n</a>
+                <a href="pag5.html" class="temaDropdown">📻 Ondas de radio y microondas</a>
+                <a href="pag6.html" class="temaDropdown">🔥 Infrarrojo y radiaci&oacute;n t&eacute;rmica</a>
+                <a href="pag7.html" class="temaDropdown">👁️ Luz visible y percepci&oacute;n humana</a>
+                <a href="pag8.html" class="temaDropdown">☀️ Ultravioleta (UV): beneficios y riesgos</a>
+                <a href="pag9.html" class="temaDropdown">🩻 Rayos X</a>
+                <a href="pag10.html" class="temaDropdown">☢️ Rayos gamma</a>
+                <a href="pag11.html" class="temaDropdown">⚛️ Interacci&oacute;n con la materia</a>
+                <a href="pag12.html" class="temaDropdown">🔮 Aplicaciones innovadoras y futuro</a>
+            </div>
+        </div>
+        
+        <div class="contenidopagina">
+            <h1 align="center">📡 Generaci&oacute;n y Detecci&oacute;n de Ondas Electromagn&eacute;ticas</h1>
+            <hr size=2 width="100%" color=" #319795"> 
+            
+            <h2>1. El Principio de la Generaci&oacute;n</h2>
+            <p>La creaci&oacute;n de una Onda Electromagn&eacute;tica (OEM) se basa en la <b>aceleraci&oacute;n de cargas el&eacute;ctricas</b>.</p>
+            
+            <h3>&iquest;C&oacute;mo se Crean?</h3>
+            <ul>
+                <li>
+                    <strong>Cargas Aceleradas:</strong> Una carga el&eacute;ctrica (como un electr&oacute;n) que cambia su velocidad o direcci&oacute;n (oscila) crea campos el&eacute;ctricos y magn&eacute;ticos que se propagan.
+                </li>
+                <li>
+                    <strong>La Dualidad:</strong> El campo el&eacute;ctrico variable produce un campo magn&eacute;tico variable, y viceversa. Esta interdependencia permite que la perturbaci&oacute;n se propague a la velocidad de la luz (c).
+                </li>
+            </ul>
+            
+            <h3>Mecanismos Comunes de Generaci&oacute;n</h3>
+            <table border="1" cellpadding="10" cellspacing="0" width="100%" align="center">
+                <tr class="cabeceraclara">
+                    <td><strong>Mecanismo</strong></td>
+                    <td><strong>Descripci&oacute;n</strong></td>
+                    <td><strong>Ejemplos de OEM Generada</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>Circuitos Oscilantes</strong></td>
+                    <td>Electrones oscilando r&aacute;pidamente en una antena (Circuitos LC).</td>
+                    <td>Ondas de Radio y Microondas.</td>
+                </tr>
+                <tr>
+                    <td><strong>Transiciones Electr&oacute;nicas</strong></td>
+                    <td>Electrones en los &aacute;tomos cambian de un nivel de energ&iacute;a a otro (saltos cu&aacute;nticos).</td>
+                    <td>Luz Visible, Ultravioleta (UV), Rayos X.</td>
+                </tr>
+                <tr>
+                    <td><strong>Radiaci&oacute;n de Cuerpo Negro</strong></td>
+                    <td>Vibraci&oacute;n t&eacute;rmica de los &aacute;tomos y mol&eacute;culas debido a su temperatura.</td>
+                    <td>Radiaci&oacute;n Infrarroja y T&eacute;rmica.</td>
+                </tr>
+                <tr>
+                    <td><strong>Desintegraci&oacute;n Nuclear</strong></td>
+                    <td>Cambios en el n&uacute;cleo at&oacute;mico, liberando alta energ&iacute;a.</td>
+                    <td>Rayos Gamma.</td>
+                </tr>
+            </table>
+
+            <hr size=2 width="100%" color=" #319795"> 
+
+            <h2>2. Detecci&oacute;n de las Ondas</h2>
+            <p>La detecci&oacute;n es el proceso inverso a la generaci&oacute;n: la OEM transfiere su energ&iacute;a a un detector que contiene cargas el&eacute;ctricas para generar una se&ntilde;al.</p>
+
+            <h3>Mecanismos Clave de Detecci&oacute;n</h3>
+            <ol>
+                <li>
+                    <strong>Antenas Receptoras (Radio/Microondas):</strong>
+                    <p>El campo el&eacute;ctrico de la onda incide sobre la antena, obligando a los electrones libres del metal a <b>oscilar</b>. Esto genera una corriente el&eacute;ctrica detectable.</p>
+                    <img class="gif1" src="microondas.gif">
+                </li>
+                <li>
+                    <strong>Efecto Fotoel&eacute;ctrico (Luz Visible/UV/Rayos X):</strong>
+                    <p>Los fotones chocan y <b>arrancan electrones</b> de un material semiconductor o metal, generando as&iacute; una corriente (usado en c&aacute;maras y paneles solares).</p>
+                    <br><br>
+                <img class="gif2" src="uv.gif">  
+                </li>
+                <br><br>
+                <li>
+                    <strong>Detecci&oacute;n T&eacute;rmica (Infrarrojo):</strong>
+                    <p>La onda es absorbida por un material, <b>aumentando su temperatura</b>. Este cambio de calor se mide y se traduce en una se&ntilde;al.</p>
+                </li>
+            </ol>
+
+            <hr size=2 width="100%" color=" #319795"> 
+
+            <h2>3. Aplicaciones Tecnol&oacute;gicas (Resumen)</h2>
+            <p>La generaci&oacute;n y detecci&oacute;n de OEM es la base de la comunicaci&oacute;n moderna:</p>
+
+            <table border="1" cellpadding="10" cellspacing="0" width="80%" align="center">
+                <tr class="cabeceraprincipal">
+                    <td><strong>Tecnolog&iacute;a</strong></td>
+                    <td><strong>Ejemplo de Generaci&oacute;n</strong></td>
+                    <td><strong>Ejemplo de Detecci&oacute;n</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>Radio y TV</strong></td>
+                    <td>Electrones oscilando en antenas emisoras.</td>
+                    <td>Antenas receptoras que inducen corriente.</td>
+                </tr>
+                <tr>
+                    <td><strong>Telefon&iacute;a M&oacute;vil</strong></td>
+                    <td>Circuitos electr&oacute;nicos que generan microondas.</td>
+                    <td>El chip y antena interna del tel&eacute;fono.</td>
+                </tr>
+                <tr>
+                    <td><strong>Rayos X</strong></td>
+                    <td>Electrones acelerados que chocan contra un blanco.</td>
+                    <td>Placas fotogr&aacute;ficas o detectores digitales.</td>
+                </tr>
+            </table>
+        </div>
+        <div class="pieContenido">
+            Proyecto 1 TDS "B" 2025, Ondas electromagn&eacute;ticas.
+        </div>
+    </div>
+</body>
+</html>

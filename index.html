@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+<head>
+    <title>Ondas electromagn&eacute;ticas</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel|Dancing Script|Josefin Sans|Petit Formal Script|Roboto|Numans"> 
+    <style>
+        body {
+            font-family: "Trirong", serif;
+            background-color: #e6f7f5;
+        }
+        
+        .contenedor {
+            width: auto ;  
+            height: auto;
+            margin: 40px; 
+            box-shadow: 0 4px 8px #000000;
+            background-color: white;
+            border-radius: 8px;
+        }
+        
+        .encabezamiento {
+            background-color: #4fd1c5;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-bottom: 3px solid #319795;
+        }
+        
+        .encabezamiento h1 {
+            font-size: 32px;
+            font-family: "Numans", sans-serif;
+        }
+        .navegacion {
+            background-color: #319795;
+            padding: 10px 0;
+        }
+        
+        .navegacion ul {
+            text-align: center;
+        }
+        
+        .navegacion li {
+            display: inline-block;
+            margin:  15px;
+            transition: transform 0.3s;
+        }
+        
+        .navegacion li:hover {
+            transform: scale(1.05);
+        }
+        
+        .navegacion a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-family: "Roboto", sans-serif;
+        }
+        
+        .navegacion a:hover {
+            background-color: #4fd1c5;
+        }
+        .contenidoTabla {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .columna {
+            padding: 60px;
+            vertical-align: top;
+        }
+        
+        .columnaSinBorde {
+            border-right: none;
+        }
+        
+        .columna h2 {
+            color: #319795;
+            border-bottom: 2px solid #4fd1c5;
+            padding-bottom: 10px;
+            font-family: "Dancing Script", sans-serif;
+        }
+        .columna p {
+            text-align: justify;
+            line-height: 1.6;
+        }
+        .fuenteNumans {
+            font-family: Numans, sans-serif;
+        }
+        .botonTema {
+            display: block;
+            width: 100%;
+            margin: 12px ;
+            padding: 16px;
+            background-image: url("coco2.jpg");
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            font-family: "Josefin Sans", sans-serif;
+            font-weight: bold;
+            font-size: 16px;
+            transition: transform 0.5s;
+            box-shadow: #000000;
+        }
+        
+        .botonTema:hover {
+            background-image: url("coco3.jpg");
+            transform: scale(1.1);
+            color: #373D63;
+        }
+
+        .botonNav {
+            display: block;
+            width: 100%;
+            margin: 8px 0;
+            padding: 12px 15px;
+            background-color: #f0f9f8;
+            color: #319795;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 25px;
+            font-family: "Roboto", sans-serif;
+            font-weight: normal;
+            font-size: 14px;
+            transition: transform 0.3s;
+            border: 1px solid #b2f5ea;
+        }
+        
+        .botonNav:hover {
+            background-color: #e6f7f5;
+            border-color: #4fd1c5;
+            transform: scale(1.02);
+        }
+        
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        
+        .droppp {
+            background-color: #4fd1c5;
+            color: white;
+            padding: 12px 20px;
+            font-size: 16px;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: transform 0.3s;
+            font-family: "Roboto", sans-serif;
+        }
+        
+        .droppp:hover {
+            transform: scale(1.05);
+        }
+        
+        .dropdownContent {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px #000000;
+            border-radius: 4px;
+            padding: 15px;
+        }
+        
+        .dropdown:hover .dropdownContent {
+            display: block;
+        }
+        
+        .participante {
+            margin: 8px 0;
+            padding: 5px;
+            border-bottom: 1px solid #e6f7f5;
+            transition: transform 0.3s;
+            font-family: "Trirong", serif;
+        }
+        
+        .participante:hover {
+            transform: scale(1.05);
+        }
+        
+        .participanteSinBorde {
+            border-bottom: none;
+        }
+        .pieTabla {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #319795;
+            color: white;
+        }  
+        
+        .pieContenido {
+            padding: 15px;
+            text-align: center;
+            border-top: 3px solid #4fd1c5;
+            font-family: "Roboto", sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="encabezamiento">
+            <h1>Ondas electromagn&eacute;ticas</h1>
+        </div>
+        <div class="navegacion">
+
+        </div>     
+        <table class="contenidoTabla">
+            <tr>
+                <td class="columna" width="33%">
+                    <div class="dropdown">
+                        <a href="#" class="droppp">Participantes del 1 TDS "B"</a>
+                        <div class="dropdownContent">
+                            <div class="participante"><b>Pamela Angely Ort&iacute;z V.</b></div>
+                            <div class="participante"><b>Lucila Stephanie Portillo G.</b></div>
+                            <div class="participante participanteSinBorde"><b>Marina Elizabeth Aven.</b></div>
+                        </div>
+                    </div>
+                    <br><br><br>
+                    <h2>¿Qu&eacute; son las ondas electromagn&eacute;ticas?</h2>
+                    <p class="fuenteNumans">Las ondas electromagn&eacute;ticas son perturbaciones que combinan campos el&eacute;ctricos y magn&eacute;ticos oscilantes que se propagan a trav&eacute;s del espacio transportando energ&iacute;a. Pueden viajar por el vac&iacute;o y se diferencian por su longitud de onda y frecuencia.</p>
+                    <p class="fuenteNumans">El espectro electromagn&eacute;tico abarca desde las ondas de radio y microondas hasta la luz visible, los rayos ultravioleta y los rayos X. De los que abarcaremos en esta traves&iacute;a.</p>
+                </td>
+                
+                <td class="columna" width="34%">
+                    <h2>Temas principales</h2>
+                    <a href="pag1.html" class="botonTema">🌊 ¿Qu&eacute; son las ondas electromagn&eacute;ticas?</a>
+                    <a href="pag2.html" class="botonTema">🌈 El espectro electromagn&eacute;tico</a>
+                    <a href="pag3.html" class="botonTema">⚙️ Propiedades fundamentales</a>
+                    <a href="pag4.html" class="botonTema">📡 Generaci&oacute;n y detecci&oacute;n</a>
+                    <a href="pag5.html" class="botonTema">📻 Ondas de radio y microondas</a>
+                    <a href="pag6.html" class="botonTema">🔥 Infrarrojo y radiaci&oacute;n t&eacute;rmica</a>
+                    <a href="pag7.html" class="botonTema">👁️ Luz visible y percepci&oacute;n humana</a>
+                    <a href="pag8.html" class="botonTema">☀️ Ultravioleta (UV): beneficios y riesgos</a>
+                    <a href="pag9.html" class="botonTema">🩻 Rayos X</a>
+                    <a href="pag10.html" class="botonTema">☢️ Rayos gamma</a>
+                    <a href="pag11.html" class="botonTema">⚛️ Interacci&oacute;n con la materia</a>
+                    <a href="pag12.html" class="botonTema">🔮 Aplicaciones innovadoras y futuro</a>
+                </td>
+                
+                <td class="columna columnaSinBorde" width="33%">
+                    <h2>Explora m&aacute;s</h2>
+                    <p class="fuenteNumans">Para conocer a fondo cada uno de estos temas, haz clic a uno de las siguientes a continuaci&oacute;n. Cada p&aacute;gina contiene informaci&oacute;n detallada sobre las diferentes partes del espectro electromagn&eacute;tico y sus aplicaciones en nuestra vida cotidiana.</p>
+                    <p class="fuenteNumans">Las ondas electromagn&eacute;ticas son fundamentales para tecnolog&iacute;as como las comunicaciones, la medicina y la exploraci&oacute;n espacial.</p>
+                    <a href="https://www.significados.com/onda-electromagnetica/" class="botonNav">Concepto por : Stephen Rhoton</a>
+                    <a href="https://es.khanacademy.org/science/ap-chemistry/electronic-structure-of-atoms-ap/bohr-model-hydrogen-ap/a/light-and-the-electromagnetic-spectrum" class="botonNav">Espectro por : Khan Academy</a>
+                    <a href="https://es.wikiversity.org/wiki/Propiedades_de_las_ondas_electromagn%C3%A9ticas" class="botonNav">Propiedades por : Wikiversidad</a>
+                    <a href="aplicaciones.pdf" class="botonNav">Aplicaciones [PDF]</a>
+                </td>
+            </tr>
+        </table>
+        <table class="pieTabla">
+            <tr>
+                <td class="pieContenido">Proyecto 1 TDS "B" 2025, Ondas electromagn&eacute;ticas.</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+ <meta charset="UTF-8">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>👁️ Luz Visible y Percepción Humana</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel|Dancing Script|Josefin Sans|Petit Formal Script|Roboto|Numans|Trirong">
+    <style>
+       .dropdown {
+            position: relative;
+            display: inline-block;
+            margin-top: 20px;
+            width: 100%; 
+            text-align: center;
+            transition: padding-bottom 0.5s; 
+        }
+        
+        .dropdown:hover {
+            padding-bottom: 250px; 
+        }
+
+        .droppp {
+            background-color: #4fd1c5;
+            color: white;
+            padding: 14px 24px;
+            font-size: 18px;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: transform 0.3s;
+            font-family: "Roboto", sans-serif;
+        }
+        
+        .droppp:hover {
+            transform: scale(1.05);
+        }
+
+        .dropdownContent {
+            display: none;
+            position: absolute; 
+            background-color: #e6f7f5;
+            width: auto; 
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            
+            border-radius: 4px;
+            padding: 12px;
+            text-align: center; 
+        }
+        
+        .dropdown:hover .dropdownContent {
+            display: block;
+        }
+
+        .temaDropdown {
+            display: inline-block;
+            width: 180px; 
+            height: 40px; 
+            padding: 8px 14px; 
+            vertical-align: top;
+            margin: 8px; 
+            background-color: #4fd1c5; 
+            color: white;
+            text-align: center; 
+            text-decoration: none;
+            border-radius: 8px;
+            font-family: "Josefin Sans", sans-serif; 
+            font-weight: bold;
+            font-size: 14px;
+            transition: transform 0.5s;
+        }
+        
+        .temaDropdown:hover {
+            background-color: #3aa89b;
+            transform: scale(1.1);
+            color: white; 
+        }
+
+        .contenidopagina {
+            padding: 20px;
+            text-align: center;
+            font-family: "Roboto", sans-serif;
+            background-color: white;
+            width: auto;
+            height: auto;
+        }
+        body {
+            background-color: #e6f7f5;
+            font-family: "Roboto", sans-serif;
+            font-size: 18px;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            background-color: #4fd1c5;
+            color: white;
+            font-family: "Numans", sans-serif;
+            text-align: center;
+            font-size: 40px;
+            margin: 0;
+            padding: 20px;
+            border-bottom: 4px solid #319795;
+            letter-spacing: 1px;
+        }
+
+        .contenedor {
+            width: 90%;
+            max-width: auto;
+            margin: 30px auto;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            padding: 20px;
+        }
+
+        .seccion {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            background-color: #f0f9f8;
+            border: 2px solid #b2f5ea;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .seccion:hover {
+            transform: scale(1.01);
+            border-color: #4fd1c5;
+        }
+
+        .texto {
+            flex: 1;
+            padding: 15px;
+        }
+
+        .texto h2 {
+            font-family: "Dancing Script", cursive;
+            color: #319795;
+            font-size: 32px;
+            border-left: 6px solid #4fd1c5;
+            padding-left: 15px;
+            margin-top: 0;
+        }
+
+        .texto p {
+            text-align: justify;
+            line-height: 1.6;
+            margin-top: 10px;
+            font-family: "Roboto", sans-serif;
+        }
+
+        .imagen {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+        }
+        
+        .imagen img {
+            max-width: 380px;
+            width: 90%;
+            border-radius: 10px;
+            border: 2px solid #319795;
+            transition: transform 0.3s;
+        }
+        
+        .imagen img:hover {
+            transform: scale(1.05);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #ffffff;
+            font-family: "Roboto", sans-serif;
+        }
+
+        table th, table td {
+            border: 1px solid #b2f5ea;
+            padding: 12px;
+            text-align: center;
+        }
+
+        table th {
+            background-color: #319795;
+            color: white;
+            font-family: "Numans", sans-serif;
+            font-weight: bold;
+        }
+
+        ul {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            text-align: justify;
+            font-family: "Roboto", sans-serif;
+        }
+        
+        .volver {
+            text-align: center;
+            margin-top: 20px;
+            padding-bottom: 30px;
+        }
+
+        .volver a {
+            background-color: #319795;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-family: "Numans", sans-serif;
+            transition: 0.3s;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .volver a:hover {
+            background-color: #4fd1c5;
+            transform: scale(1.05);
+        }
+
+        marquee {
+            margin-top: 30px;
+            padding: 10px;
+            background-color: #b2f5ea;
+            color: #319795;
+            font-family: "Dancing Script", cursive;
+            font-size: 22px;
+            border-top: 2px solid #4fd1c5;
+            border-bottom: 2px solid #4fd1c5;
+            border-radius: 0 0 10px 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dropdown">
+        <a href="#" class="droppp">Ver temas principales...</a>
+        <br>
+        <div class="dropdownContent">
+            <a href="index.html" class="temaDropdown">🏠 Ir a página principal</a>
+            <a href="pag1.html" class="temaDropdown">🌊 ¿Qué son las ondas electromagnéticas?</a>
+            <a href="pag2.html" class="temaDropdown">🌈 El espectro electromagnético</a>
+            <a href="pag3.html" class="temaDropdown">⚙️ Propiedades fundamentales</a>
+            <a href="pag4.html" class="temaDropdown">📡 Generación y detección</a>
+            <a href="pag5.html" class="temaDropdown">📻 Ondas de radio y microondas</a>
+            <a href="pag6.html" class="temaDropdown">🔥 Infrarrojo y radiación térmica</a>
+            <a href="pag7.html" class="temaDropdown">👁️ Luz visible y percepción humana</a>
+            <a href="pag8.html" class="temaDropdown">☀️ Ultravioleta (UV): beneficios y riesgos</a>
+            <a href="pag9.html" class="temaDropdown">🩻 Rayos X</a>
+            <a href="pag10.html" class="temaDropdown">☢️ Rayos gamma</a>
+            <a href="pag11.html" class="temaDropdown">⚛️ Interacción con la materia</a>
+            <a href="pag12.html" class="temaDropdown">🔮 Aplicaciones innovadoras y futuro</a>
+        </div>
+    </div>
+    <div class="contenedor">
+    <h1>👁️ Luz Visible y Percepción Humana</h1>
+        <div class="seccion">
+            <div class="texto">
+                <h2>El ojo humano como detector</h2>
+                <p>
+                    La <b>luz visible</b> es la parte del espectro electromagnético que el ojo humano puede percibir.
+                    Su rango va desde los <b>400 nm (violeta)</b> hasta los <b>700 nm (rojo)</b>. 
+                    Los receptores visuales llamados <i>conos</i> y <i>bastones</i> permiten detectar diferentes colores
+                    e intensidades, haciendo posible la visión.
+                </p>
+            </div>
+            <div class="imagen">
+                <img src="ojo.png" alt="Ojo humano y luz visible">
+            </div>
+        </div>
+
+        <div class="seccion">
+            <div class="texto">
+                <h2>Colores y longitudes de onda</h2>
+                <p>
+                    Cada color visible corresponde a una longitud de onda diferente:
+                </p>
+                <table>
+                    <tr><th>Color</th><th>Longitud de onda</th></tr>
+                    <tr><td>Violeta</td><td>400–450 nm</td></tr>
+                    <tr><td>Azul</td><td>450–495 nm</td></tr>
+                    <tr><td>Verde</td><td>495–570 nm</td></tr>
+                    <tr><td>Amarillo</td><td>570–590 nm</td></tr>
+                    <tr><td>Naranja</td><td>590–620 nm</td></tr>
+                    <tr><td>Rojo</td><td>620–700 nm</td></tr>
+                </table>
+            </div>
+            <div class="imagen">
+                <img src="colores.gif" alt="Espectro de colores">
+            </div>
+        </div>
+
+        <div class="seccion">
+            <div class="texto">
+                <h2>Fenómenos ópticos</h2>
+                <ul>
+                    <li><b>Reflexión:</b> la luz rebota en superficies pulidas.</li>
+                    <li><b>Refracción:</b> cambia de dirección al pasar entre medios.</li>
+                    <li><b>Dispersión:</b> separación de colores, como en un arcoíris.</li>
+                    <li><b>Interferencia:</b> combinación de ondas que generan patrones de luz y sombra.</li>
+                </ul>
+            </div>
+            <div class="imagen">
+                <img src="arcoiris.jpg" alt="Fenómenos de la luz visible">
+            </div>
+        </div>
+        <marquee behavior="alternate">
+            🌈 La luz visible nos permite ver los colores del mundo y disfrutar su belleza. 🌈
+        </marquee>
+    </div>
+
+</body>
+</html>

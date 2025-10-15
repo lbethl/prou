@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+<head>
+    <title>🩻 Rayos X</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel|Dancing Script|Josefin Sans|Petit Formal Script|Roboto|Numans|Trirong">
+    <style>    
+            .dropdown {
+                position: relative;
+                display: inline-block;
+                margin-top: 20px;
+                width: 100%; 
+                text-align: center;
+                transition: padding-bottom 0.5s; 
+            }
+            
+            .dropdown:hover {
+                padding-bottom: 250px; 
+            }
+
+            .droppp {
+                background-color: #4fd1c5;
+                color: white;
+                padding: 14px 24px;
+                font-size: 18px;
+                text-decoration: none;
+                display: inline-block;
+                border-radius: 4px;
+                font-weight: bold;
+                transition: transform 0.3s;
+                font-family: "Roboto", sans-serif;
+            }
+            
+            .droppp:hover {
+                transform: scale(1.05);
+            }
+
+            .dropdownContent {
+                display: none;
+                position: absolute; 
+                background-color: #e6f7f5;
+                width: auto; 
+                left: 0;
+                right: 0;
+                margin-left: auto;
+                margin-right: auto;
+                border-radius: 4px;
+                padding: 12px;
+                text-align: center; 
+            }
+            
+            .dropdown:hover .dropdownContent {
+                display: block;
+            }
+
+            .temaDropdown {
+                display: inline-block;
+                width: 180px; 
+                height: 40px; 
+                padding: 8px 14px; 
+                vertical-align: top;
+                margin: 8px; 
+                background-color: #4fd1c5; 
+                color: white;
+                text-align: center; 
+                text-decoration: none;
+                border-radius: 8px;
+                font-family: "Josefin Sans", sans-serif; 
+                font-weight: bold;
+                font-size: 14px;
+                transition: transform 0.5s;
+            }
+            
+            .temaDropdown:hover {
+                background-color: #3aa89b;
+                transform: scale(1.1);
+                color: white; 
+            }
+
+            .contenidopagina {
+                padding: 20px;
+                text-align: center;
+                font-family: "Roboto", sans-serif;
+                background-color: white;
+                width: auto;
+                height: auto;
+            }     
+            body {
+                font-family: "Trirong", serif;
+                background-color: #e6f7f5;
+                margin: 0;
+                padding: 0;
+                color: #333;
+            }
+
+            .contenedorPrincipal {
+                width: 90%;
+                max-width: 1190px;
+                margin: 30px auto;
+                background-color: white;
+                border-radius: 12px;
+                overflow: hidden;
+            }
+            
+            .contenidopagina {
+                padding: 40px 60px;
+                text-align: left;
+                font-family: "Numans", sans-serif;
+                min-height: 400px;
+            }
+
+            .contenidopagina h1 {
+                color: #319795;
+                font-family: "Numans", sans-serif;
+                text-align: center;
+                font-size: 42px;
+                padding: 10px 0;
+                margin-bottom: 40px;
+                border-bottom: 4px solid #4fd1c5;
+            }
+
+            .contenidopagina h2 {
+                color: #319795;
+                padding: 15px 0 10px 0;
+                font-family: "Dancing Script", cursive;
+                margin-top: 50px;
+                font-size: 38px;
+                text-align: left;
+            }
+
+            .contenidopagina h3 {
+                color: #4fd1c5;
+                font-family: "Josefin Sans", sans-serif;
+                margin-top: 30px;
+                padding: 5px 15px;
+                background-color: #e6f7f5;
+                border-left: 5px solid #319795;
+            }
+            
+            .contenidopagina p, .contenidopagina li {
+                line-height: 1.8;
+                text-align: justify;
+                font-family: "Roboto", sans-serif;
+                margin-left: 20px;
+            }
+            
+            .contenidopagina table {
+                border-collapse: collapse;
+                margin: 20px auto;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+                font-family: "Roboto", sans-serif;
+                width: 100%;
+                border-radius: 8px;
+                overflow: hidden;
+            }
+            .contenidopagina table td {
+                padding: 15px;
+                border-left: none;
+                border-right: none;
+                border-bottom: 1px solid #e0e0e0;
+            }
+            
+            .cabeceraprincipal td {
+                background-color: #4fd1c5;
+                color: white;
+                font-weight: bold;
+                border: none;
+            }
+            .contenidopagina table tr:hover {
+                background-color: #b2f5ea;
+            }
+
+            .pieContenido {
+                background-color: #319795;
+                color: white;
+                padding: 20px;
+                text-align: center;
+                font-family: "Roboto", sans-serif;
+                border-radius: 0 0 12px 12px;
+                margin-top: 30px;
+            }
+            
+            .datoCurioso {
+                margin-top: 40px;
+                padding: 20px;
+                background-color: #f0f9f8;
+                border: 2px solid #4fd1c5;
+                border-radius: 10px;
+                font-family: "Josefin Sans", sans-serif;
+                font-size: 1.1em;
+                text-align: center;
+                grid-column: 1 / span 2; 
+                margin-left: 0;
+                margin-right: 0;
+            }
+            
+            .imagenContainer {
+                text-align: center;
+                margin: 20px 0;
+            }
+            .imagenContainer img {
+                max-width: 90%;
+                height: auto;
+                border-radius: 10px;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            }
+            
+            .contenidoDoble {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 40px;
+                margin-top: 30px;
+            }
+
+            .columnaIzquierda, .columnaDerecha {
+                padding: 0;
+            }
+            
+            .columnaDerecha h2, .columnaIzquierda h2 {
+                margin-top: 0;
+            }
+            
+            .linkTubo {
+                display: block;
+                background-color: #b2f5ea;
+                color: #319795;
+                padding: 10px 15px;
+                margin: 10px auto;
+                width: fit-content;
+                max-width: 90%;
+                text-decoration: none;
+                border-radius: 5px;
+                font-weight: bold;
+                transition: background-color 0.3s;
+                font-family: "Roboto", sans-serif;
+            }
+
+            .linkTubo:hover {
+                background-color: #4fd1c5;
+                color: white;
+            }
+            img.rayos3{
+            	border-radius: 50px;
+            	width: 200px;
+            	height: 350px;
+            }
+    </style>
+</head>
+<body>
+    <div class="dropdown">
+        <a href="#" class="droppp">Ver temas principales...</a>
+        <br>
+        <div class="dropdownContent">
+            <a href="index.html" class="temaDropdown">🏠 Ir a página principal</a>
+            <a href="pag1.html" class="temaDropdown">🌊 ¿Qué son las ondas electromagnéticas?</a>
+            <a href="pag2.html" class="temaDropdown">🌈 El espectro electromagnético</a>
+            <a href="pag3.html" class="temaDropdown">⚙️ Propiedades fundamentales</a>
+            <a href="pag4.html" class="temaDropdown">📡 Generación y detección</a>
+            <a href="pag5.html" class="temaDropdown">📻 Ondas de radio y microondas</a>
+            <a href="pag6.html" class="temaDropdown">🔥 Infrarrojo y radiación térmica</a>
+            <a href="pag7.html" class="temaDropdown">👁️ Luz visible y percepción humana</a>
+            <a href="pag8.html" class="temaDropdown">☀️ Ultravioleta (UV): beneficios y riesgos</a>
+            <a href="pag9.html" class="temaDropdown">🩻 Rayos X</a>
+            <a href="pag10.html" class="temaDropdown">☢️ Rayos gamma</a>
+            <a href="pag11.html" class="temaDropdown">⚛️ Interacción con la materia</a>
+            <a href="pag12.html" class="temaDropdown">🔮 Aplicaciones innovadoras y futuro</a>
+        </div>
+    </div>
+    
+    <div class="contenedorPrincipal">
+        <div class="contenidopagina">
+            
+            <h1 align="center">🩻 Rayos X: La Visión Interna de la Materia</h1>
+            
+            <p>Los <b>Rayos X</b> son una forma de radiación electromagnética con longitudes de onda extremadamente cortas y, por lo tanto, una energía muy alta. Se sitúan entre la radiación ultravioleta y los rayos gamma en el espectro electromagnético. Su alta energía les permite penetrar la materia opaca, lo que los hace indispensables en campos como la medicina y la industria.</p>
+
+            <div class="contenidoDoble">
+                
+                <div class="columnaIzquierda">
+                    <h2>1. Naturaleza y Generación de los Rayos X</h2>
+                    <p>Los Rayos X se caracterizan por ser radiación ionizante, lo que significa que tienen suficiente energía para arrancar electrones de los átomos, un proceso que puede ser biológicamente dañino pero tecnológicamente útil.</p>
+
+                    <h3>¿Cómo se Producen?</h3>
+                    <ul>
+                        <li>Frenado (Bremsstrahlung): La forma más común. Se producen cuando un haz de electrones de alta velocidad es repentinamente detenido (frenado) por un objetivo metálico (ánodo) en un tubo de vacío. La desaceleración libera el exceso de energía en forma de fotones de Rayos X.</li>
+                        <li>Rayos X Característicos: Ocurren cuando un electrón de alta energía golpea y expulsa un electrón de las capas internas del átomo objetivo. Cuando un electrón de una capa superior cae para ocupar el hueco, libera un fotón de Rayo X con una energía específica y "característica" del material.</li>
+                    </ul>
+                    
+                    <div class="imagenContainer">
+                        <img src="rayos2.png"><br><br>
+                        <a href="https://www.famaf.unc.edu.ar/~pperez1/manuales/cdr/tubos-de-rayos-x.html" class="linkTubo">Click para ver más... (Diagrama del Tubo de Rayos X)</a>
+                        <br><br>
+                        <img src="rayos.png">
+                    </div>
+                </div>
+
+                <div class="columnaDerecha">
+                    <hr size="1" width="100%" color="#4fd1c5">
+                    <h2>2. Aplicaciones Esenciales en la Sociedad</h2>
+                    <p>La capacidad de los Rayos X para penetrar diferentes densidades de material a distintas velocidades es la clave de su utilidad.</p>
+
+                    <table border="1" cellpadding="10" cellspacing="0">
+                        <tr class="cabeceraprincipal">
+                            <td><b>Campo</b></td>
+                            <td><b>Uso Principal</b></td>
+                            <td><b>Principio Físico Clave</b></td>
+                        </tr>
+                        <tr>
+                            <td><b>Medicina (Radiología)</b></td>
+                            <td>Diagnóstico de fracturas óseas y detección de patologías pulmonares o dentales.</td>
+                            <td>La absorción diferencial: el calcio de los huesos absorbe más Rayos X que los tejidos blandos.</td>
+                        </tr>
+                        <tr>
+                            <td><b>Tomografía Computarizada (TC)</b></td>
+                            <td>Obtención de imágenes transversales detalladas del cuerpo para un diagnóstico más preciso.</td>
+                            <td>Múltiples proyecciones de Rayos X combinadas por computadora para crear una imagen 3D.</td>
+                        </tr>
+                        <tr>
+                            <td><b>Seguridad</b></td>
+                            <td>Escaneo de equipaje en aeropuertos y control de calidad en productos manufacturados.</td>
+                            <td>Capacidad de penetrar materiales para identificar objetos o estructuras internas sin abrirlos.</td>
+                        </tr>
+                        <tr>
+                            <td><b>Cristalografía</b></td>
+                            <td>Determinación de la estructura atómica y molecular de cristales (ADN, proteínas, minerales).</td>
+                            <td>Difracción: el patrón que forman los Rayos X al chocar contra la estructura regular de un cristal.</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="datoCurioso">
+                    💡 <b>Dato Curioso:</b> Los Rayos X fueron descubiertos accidentalmente por el físico alemán <b>Wilhelm Conrad Röntgen</b> en 1895. Inicialmente los llamó <b>"Rayos Incógnita"</b> (X), ya que desconocía su naturaleza. Su primera radiografía famosa fue la mano de su esposa, mostrando claramente sus huesos y su anillo de bodas. 💍
+                </div>
+            </div>
+            <br><br>
+            <center>
+            <img class="rayos3" src="rayos3.jpg">          	
+            </center>
+
+        </div>
+        <div class="pieContenido">
+            Proyecto 1TDS "B" 2025, Ondas electromagnéticas.
+        </div>
+    </div>
+</body>
+</html>
